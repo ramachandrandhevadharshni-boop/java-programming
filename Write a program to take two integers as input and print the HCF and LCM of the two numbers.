@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class HCFandLCM {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt(); // First number
+        int b = sc.nextInt(); // Second number
+        
+        int hcf = findHCF(a, b);
+        int lcm = (a * b) / hcf; // LCM formula: LCM * HCF = a * b
+        
+        System.out.println(hcf);
+        System.out.println(lcm);
+    }
+    
+    // Function to calculate HCF (GCD) using Euclidean algorithm
+    public static int findHCF(int x, int y) {
+        while (y != 0) {
+            int temp = y;
+            y = x % y;
+            x = temp;
+        }
+        return x;
+    }
+}
