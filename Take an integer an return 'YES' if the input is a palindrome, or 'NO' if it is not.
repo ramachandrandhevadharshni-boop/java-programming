@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner s = new Scanner(System.in);
+      int num=s.nextInt();
+      int rev,rem,num1;
+      rev=0;
+      num1=num;
+      while(num>0){
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+      }if(num1==rev){
+        System.out.println("YES");
+      }else{
+      System.out.println("NO");
+      }
+  }
+}
